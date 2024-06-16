@@ -27,6 +27,8 @@ namespace Blog.Presentation.Controllers
                     .Where(a => a.Student.Legajo == legajo)
                     .Include(a => a.Class);
 
+                if (!assignments.Any()) { throw new Exception(); }
+
                 AssignmentsViewModel model = new AssignmentsViewModel(assignments);
 
                 return View(model);

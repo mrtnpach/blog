@@ -62,7 +62,7 @@ CREATE INDEX "IX_InfoItems_StudentId" ON "InfoItems" ("StudentId");
 CREATE INDEX "IX_Students_CollegeId" ON "Students" ("CollegeId");
 
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
-VALUES ('20240616032826_Initial', '6.0.31');
+VALUES ('20240616035042_InitialMigration', '6.0.31');
 
 COMMIT;
 

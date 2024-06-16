@@ -30,6 +30,8 @@ namespace Blog.Presentation.Controllers
                     .Include(s => s.InfoItems)
                     .FirstOrDefault()!;
 
+                if(student == null) { throw new Exception(); }
+
                 StudentViewModel model = new StudentViewModel(student);
 
                 return View(model);
