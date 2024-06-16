@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+}
+
+#main-container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 72px auto 2.813rem;
+}
+
+header.navbar {
+    background-image: url("../resources/images/background/background_d.png");
+    display: flex;
+    justify-content: left; /*Not used if there are nav options*/
+    padding-top: 5px;
+    padding-bottom: 5px;    
+}
+
+#body {
+    display: flex;
+    justify-content: center;
+    background-image: url("../resources/images/background/background.jpg");
+}
+
+footer.layout {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-image: url("../resources/images/background/background_d.png");
+    padding-left: 10%; /*Optional*/
+    padding-right: 10%; /*Optional*/
+}
+
+@media screen and (max-width: 850px) {
+
+    header.navbar {
+        background-image: url("../resources/images/background/background_d.png");
+        display: flex;
+        justify-content: center; /*Not used if there are nav options*/
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 0%;
+    }
+    
+    footer.layout {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-image: url("../resources/images/background/background_d.png");
+    }
+}
+
+/*HEADER*/
+#logo-img {
+    max-height: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+    filter: brightness(0.75);
+    transform-origin: center;
+    color: rgb(153,0,51);
+}
+
+#logo-img:hover {
+    /*filter: brightness(1);*/
+    cursor: pointer;
+    /*animation: shake-a 2s infinite;*/
+}
+
+.navbar-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 18px;
+}
+
+.option-text {
+    font-family: 'Crimson Text', cursive;
+    font-size: 1.5rem;
+    color: rgb(153,0,51);
+}
+
+.option-text:hover {
+    animation-name: flash-no-borders;
+    animation-duration: 0.5s;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.navbar-link {
+    cursor: default
+}
+
+/*BODY*/
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    padding: 25px 50px 25px 50px;
+    background-color: rgba(10, 10, 10, 0.25);
+}
+
+/*FOOTER*/
+p.info-text {
+    /*margin: 5px 0 10px 0;*/
+    color: rgb(102, 102, 102);
+    font-family: 'Crimson Text', cursive;
+    font-size: 1rem;
+}
+
+a.info-link {
+    color: rgb(153,0,51);
+    font-family: 'Crimson Text', cursive;
+}
+
+a.info-link:hover {
+    animation: flash-no-borders 0.5s;
+    cursor: pointer;
+}

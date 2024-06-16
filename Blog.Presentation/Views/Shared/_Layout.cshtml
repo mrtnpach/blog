@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="~/resources/images/logo/ulogo_w.png" type="image/x-icon">
+    <title>@ViewData["Title"] - UNETERNAL</title>
+    <div id="meta-tags">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="language" content="en">
+        <meta name="description" content="Uneternal Website">
+        <meta name="revised" content="Martin Pacheco, 10/25/2023">
+        <meta name="author" content="Martin Pacheco">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </div>
+    <!--CSS-->
+    <link rel="stylesheet" href="~/css/layout.css">
+    <link rel="stylesheet" href="~/css/common.css">
+    <link rel="stylesheet" href="~/css/animations.css">
+    <!--<link rel="stylesheet" href="./css/mobile.css" media="(max-width: 600px)">   -->
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Special+Elite&display=swap" rel="stylesheet">
+    <!--ICONS-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <container id="main-container">
+        <header class="navbar">
+            @*<a asp-controller="Home" asp-action="Home">*@
+            <img id="logo-img" class="logo-img" src="~/resources/images/logo/logo.png">
+            @*</a>*@
+            <div class="navbar-option">
+                <a asp-area="" asp-controller="Home" asp-action="Home" class="navbar-link">
+                    <p class="option-text">Datos</p>
+                </a>
+            </div>
+            <div class="navbar-option">
+                <a asp-area="" asp-controller="Assignments" asp-action="Assignments" class="navbar-link">
+                    <p class="option-text">Trabajos</p>
+                </a>
+            </div>
+        </header>
+        <div id="body">
+            <main id="content">
+                @RenderBody()
+            </main>
+        </div>
+        <footer class="layout">
+            <div class="footer-info">
+                <p class="info-text">&#169 Martín Pacheco | @DateTime.Now.Year</p>
+            </div>
+            <div class="footer-info">
+                <p class="info-text">
+                    [<a href="https://github.com/mrtnpach" target="_blank" class="info-link"><i class="uil uil-github"></i> GITHUB</a>]
+                </p>
+            </div>
+        </footer>
+    </container>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿@model AssignmentsViewModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Gallery";
+}
+
+@foreach (var assignment in Model.Assignments)
+{
+    <div class="background-container">
+        <div class="content-section content-section-background">
+            <h1 class="section-title-l">@assignment.Name</h1>
+        </div>
+        <div class="content-section content-section-background description-section">
+            <!-- Year string wouldn't make sense for the 1st, 2nd and 3rd-->
+            <p class="paragraph-text">@assignment.Class.Name | @assignment.Class.Year.ToString()to año | @assignment.Date.ToString("d/M/yyyy")</p>
+            <p class="paragraph-text">@assignment.Description</p>
+        </div>
+        <div class="content-section content-section-background content-section-right">
+            <p class="info-text-big">
+                [<a class="info-link info-link-big" target="_blank" href="~/assignments/@assignment.Filename">VER PDF</a>]
+            <p>
+        </div>
+    </div>
+}

@@ -1,0 +1,100 @@
+/*STRUCTURE*/
+body
+{
+    margin: 0;
+    overflow: hidden;
+}
+
+#main-container
+{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../resources/images/background/background_d.png");
+}
+
+#footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: linear-gradient(rgba(10,10,10,0), rgba(0, 0, 0, 0.50));
+}
+
+#footer-content
+{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/*LOGO*/
+#logo
+{
+    position: absolute;
+    overflow: auto;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.logo-img
+{
+    border-radius: 256px;
+}
+
+.logo-img:hover
+{
+    animation: shake-b 2s infinite;
+    cursor:pointer;
+}
+
+a.logo-link{
+    cursor: default;
+}
+
+/*INFO*/
+p.info-text {
+    margin: 5px 0 10px 0;
+    color: rgb(102, 102, 102);
+    font-family: 'Crimson Text', cursive;
+    font-size: 0.938rem;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+a.paragraph-link
+{
+    font-size: 1.25rem;
+}
+
+a:link
+{
+    color: rgb(131, 17, 17);
+}
+
+a.start-menu-link:hover
+{
+    animation: shake-a 1s infinite;
+}
+
+a.icon:hover
+{
+    animation-name: flash-no-borders;
+    animation-duration: 0.5s;
+}
+
+i.uil
+{
+    color: rgb(131, 17, 17);
+    margin: 2px 5px 15px 5px;
+    font-size: 2.5rem;
+}

@@ -1,0 +1,34 @@
+﻿@model StudentViewModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Gallery";
+
+    string imageFilename = Model.Student.Legajo + ".jpeg";
+    string assignmentFilename = Model.Student.Legajo + ".pdf";
+}
+<img id="profile-picture" src="~/resources/images/photos/@imageFilename" />
+<div class="content-section-about">
+    <h3 class="red-text">@Model.Student.FirstName @Model.Student.LastName</h3>
+    <p class="paragraph-text info-text">
+        @Model.Student.College.University | @Model.Student.College.Faculty
+    </p>
+    <p class="paragraph-text info-text">
+        @Model.Student.EmailAddress
+    </p>
+    <p class="paragraph-text info-text">
+        Legajo @Model.Student.Legajo
+    </p>
+</div>
+<div class="background-container">
+    <div class="content-section content-section-background">
+        <h1 class="section-title-l">Datos</h1>
+    </div>
+    <div class="content-section content-section-background description-section">
+        <ul>
+            @foreach (var info in Model.Student.InfoItems)
+            {
+                <li class="paragraph-text"><b>@info.Title |</b> @info.Description</li>
+            }
+        </ul>
+    </div>
+</div>
