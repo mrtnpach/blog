@@ -13,7 +13,7 @@ namespace Blog.Presentation
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddDbContext<BlogContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DataBaseServer"))
+                options.UseNpgsql(builder.Configuration.GetConnectionString("SQLServer"))
             );
 
             var app = builder.Build();
