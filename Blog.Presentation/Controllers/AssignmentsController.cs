@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Blog.Presentation.Controllers
 {
+    [Route("[controller]")]
     public class AssignmentsController : Controller
     {
         private readonly BlogContext _context;
@@ -17,7 +18,7 @@ namespace Blog.Presentation.Controllers
             _context = context;
         }
 
-        [HttpGet]
+        //[HttpGet]
         public IActionResult Assignments()
         {
             try
